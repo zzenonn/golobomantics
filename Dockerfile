@@ -2,7 +2,7 @@ FROM ubuntu
 
 
 # Install apache and remove the list of packages downloaded from apt-get update
-RUN DEBIAN_FRONTEND="noninteractive" apt-get update -y && \
+RUN TZ=Etc/UCT DEBIAN_FRONTEND="noninteractive" apt-get update -y && \
 apt-get install -y apache2 && \
 rm -r /var/lib/apt/lists/*
 
