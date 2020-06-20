@@ -1,8 +1,10 @@
 FROM ubuntu
 
+ENV TZ=Etc/UCT
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install apache and remove the list of packages downloaded from apt-get update
-RUN TZ=Etc/UCT DEBIAN_FRONTEND="noninteractive" apt-get update -y && \
+RUN apt-get update -y && \
 apt-get install -y apache2 && \
 rm -r /var/lib/apt/lists/*
 
