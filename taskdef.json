@@ -1,7 +1,7 @@
 {
     "containerDefinitions": [
         {
-            "name": "cat",
+            "name": "home",
             "image": "<IMAGE1_NAME>",
             "essential": true,
             "portMappings": [
